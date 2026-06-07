@@ -30,13 +30,6 @@
             <a href="#planner" class="hero-btn">Start Planning</a>
         </div>
 
-        <div class="mountains">
-
-            <div class="mountain mountain-one"></div>
-            <div class="mountain mountain-two"></div>
-            <div class="mountain mountain-three"></div>
-        </div>
-
     </section>
 
     <section class="planner-section" id="planner">
@@ -48,23 +41,23 @@
             <div class="input-group">
 
                 <label>Destination</label>
-                <input type="text" placeholder="Where do you want to go?">
+                <input type="text" id="placeInput" placeholder="Where do you want to go?">
 
             </div>
 
             <div class="input-group">
 
                 <label>Travel Date</label>
-                <input type="date">
+                <input type="date" id="dateInput" >
             </div>
 
             <div class="input-group">
 
                 <label>Budget</label>
-                <input type="number" placeholder="Enter Budget">
+                <input type="number" id="budgetInput" placeholder="Enter Budget">
             </div>
 
-            <button class="add-btn">Add Trip</button>
+            <button class="add-btn" id="addBtn" >Add Trip</button>
             
         </div>
 
@@ -74,25 +67,7 @@
 
         <h2>Upcoming Trips</h2>
 
-        <div class="trip-list">
-
-            <div class="trip-card">
-
-                <h3>Manali</h3>
-
-                <p>A sample trip card. Planned trips will appear here in next commit</p>
-
-                <div class="trip-info">
-                    <span>Date: 15 Dec 2026</span>
-                </div>
-
-                <div class="trip-info">
-                    <span>Budget: $150</span>
-                </div>
-
-            </div>
-
-        </div>
+        <div class="trip-list" id="tripList"></div>
 
     </section>
 

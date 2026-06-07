@@ -107,6 +107,27 @@ h2 {
     margin-bottom: 10px;
 }
 
+.trip-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.trip-card{
+    max-width: 320px;
+    border: 1px solid #ddd;
+}
+
+.trip-card h3{
+    color: #2d6a4f;
+    margin-bottom: 8px;
+}
+
+.trip-card p{
+    margin: 5px 0;
+}
+
 .footer{
     background: #2d6a4f;
     text-align: center;
