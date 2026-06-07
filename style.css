@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f7f4;
+}
+
+nav{
+    background: #2d6a4f;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo,
+.nav-links a,
+.hero-btn,
+.add-btn,
+footer{
+    color: white;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a,
+.hero-btn{
+    text-decoration: none;
+}
+
+.hero {
+
+    height: 80vh;
+    background: #d8f3dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1{
+    color: #1b4332;
+    margin-bottom: 15px;
+}
+
+.hero-content p{
+    margin-bottom: 20px;
+}
+
+.hero-btn,
+.add-btn{
+    background: #2d6a30;
+    padding: 10px 20px;
+    border: none;
+}
+
+section{
+    padding: 50px 8%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.planner-card,
+.trip-card,
+.checklist-card {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.input-group{
+    margin-bottom: 15px;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.add-btn {
+    width: 100%;
+    padding: 10px;
+}
+
+.check-item{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer{
+    background: #2d6a4f;
+    text-align: center;
+    padding: 15px;
+}
+
+@media(max-width: 768px) {
+
+    nav{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-content h1{
+        font-size: 32px;
+    }
+}
