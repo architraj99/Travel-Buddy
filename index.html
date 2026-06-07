@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Travel Buddy</title> 
+   <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+
+    <nav>
+        <div class="logo">Travel Buddy</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a> </li>
+            <li><a href="#planner">Planner</a> </li>
+            <li><a href="#trips">Trips</a> </li>
+            <li><a href="#checklist">Checklist</a> </li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            
+            <h1>Plan Your Next Adventure</h1>
+
+            <p>Hey there Buddy, Let's manage all your exciting travel plans here in one place</p>
+
+            <a href="#planner" class="hero-btn">Start Planning</a>
+        </div>
+
+        <div class="mountains">
+
+            <div class="mountain mountain-one"></div>
+            <div class="mountain mountain-two"></div>
+            <div class="mountain mountain-three"></div>
+        </div>
+
+    </section>
+
+    <section class="planner-section" id="planner">
+
+        <h2>Trip Planner</h2>
+
+        <div class="planner-card">
+
+            <div class="input-group">
+
+                <label>Destination</label>
+                <input type="text" placeholder="Where do you want to go?">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Travel Date</label>
+                <input type="date">
+            </div>
+
+            <div class="input-group">
+
+                <label>Budget</label>
+                <input type="number" placeholder="Enter Budget">
+            </div>
+
+            <button class="add-btn">Add Trip</button>
+            
+        </div>
+
+    </section>
+
+    <section class="trips-section" id="trips">
+
+        <h2>Upcoming Trips</h2>
+
+        <div class="trip-list">
+
+            <div class="trip-card">
+
+                <h3>Manali</h3>
+
+                <p>A sample trip card. Planned trips will appear here in next commit</p>
+
+                <div class="trip-info">
+                    <span>Date: 15 Dec 2026</span>
+                </div>
+
+                <div class="trip-info">
+                    <span>Budget: $150</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="checklist-section" id="checklist">
+
+        <h2>Packing Checklist</h2>
+
+        <div class="checklist-card">
+
+            <div class="check-item">
+
+                <input type="checkbox">
+                <label>CLothes</label>
+            </div>
+
+            <div class="check-item">
+
+                <input type="checkbox">
+                <label>Passport / ID</label>
+            </div>
+
+            <div class="check-item">
+
+                <input type="checkbox">
+                <label>Phone Charger</label>
+            </div>
+
+            <div class="check-item">
+
+                <input type="checkbox">
+                <label>Water Bottle</label>
+            </div>
+
+            <div class="check-item">
+
+                <input type="checkbox">
+                <label>First Aid Box</label>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Travel Buddy</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
