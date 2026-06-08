@@ -62,10 +62,12 @@ footer{
 }
 
 .hero-btn,
-.add-btn{
+.add-btn,
+#addItemBtn{
     background: #2d6a30;
     padding: 10px 20px;
     border: none;
+    color: white;
 }
 
 section{
@@ -139,6 +141,21 @@ h2 {
     margin-bottom: 15px;
     font-weight: bold;
     color: #2d6a4f;
+}
+
+#itemInput,
+#addItemBtn{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.delete-btn{
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #c1121f;
+    color: white;
 }
 
 .footer{

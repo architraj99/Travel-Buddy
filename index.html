@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Travel Buddy</title> 
-   <link rel="stylesheet" href="style.css">
-</head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Buddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
     <nav>
@@ -22,10 +22,10 @@
     <section class="hero" id="home">
 
         <div class="hero-content">
-            
+
             <h1>Plan Your Next Adventure</h1>
 
-            <p>Hey Buddy, Let's manage all your exciting travel plans here in one place</p>
+            <p>Hey Buddy, Let's manage all your exciting travel plans here in one place </p>
 
             <a href="#planner" class="hero-btn">Start Planning</a>
         </div>
@@ -42,23 +42,22 @@
 
                 <label>Destination</label>
                 <input type="text" id="placeInput" placeholder="Where do you want to go?">
-
             </div>
 
             <div class="input-group">
 
                 <label>Travel Date</label>
-                <input type="date" id="dateInput" >
+                <input type="date" id="dateInput">
             </div>
 
             <div class="input-group">
 
                 <label>Budget</label>
-                <input type="number" id="budgetInput" placeholder="Enter Budget">
+                <input type="number" id="budgetInput" placeholder="Enter budget">
             </div>
 
-            <button class="add-btn" id="addBtn" >Add Trip</button>
-            
+            <button class="add-btn" id="addBtn">Add Trip</button>
+
         </div>
 
     </section>
@@ -68,7 +67,7 @@
         <h2>Upcoming Trips</h2>
 
         <p id="tripCount">0 Trips Added</p>
-        
+
         <div class="trip-list" id="tripList"></div>
 
     </section>
@@ -76,13 +75,16 @@
     <section class="checklist-section" id="checklist">
 
         <h2>Packing Checklist</h2>
+        <input type="text" id="itemInput" placeholder="Add item to checklist">
+
+        <button id="addItemBtn">Add Item</button>
 
         <div class="checklist-card">
 
             <div class="check-item">
 
                 <input type="checkbox">
-                <label>CLothes</label>
+                <label>Clothes</label>
             </div>
 
             <div class="check-item">

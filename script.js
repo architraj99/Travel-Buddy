@@ -6,8 +6,10 @@ const addBtn = document.getElementById("addBtn");
 const tripList = document.getElementById("tripList");
 const tripCount = document.getElementById("tripCount");
 
-let trips = JSON.parse(localStorage.getItem("trips")) || [];
+const itemInput = document.getElementById("itemInput");
+const addItemBtn = document.getElementById("addItemBtn");
 
+let trips = JSON.parse(localStorage.getItem("trips")) || [];
 showTrips();
 
 addBtn.addEventListener("click", addTrip);
@@ -42,7 +44,7 @@ function showTrips() {
     tripList.innerHTML = "";
     tripCount.textContent = trips.length + "Trips Added";
 
-    trips.forEach(function(trip) {
+    trips.forEach(function(trip, index) {
 
         let daysLeft = getDaysLeft(trip.date);
 
@@ -56,18 +58,36 @@ function showTrips() {
             <p>Budget: ₹${trip.budget}</p>
 
             <p class="days-left">${daysLeft} Days Left</p>
+
+            <button class="delete-btn" data-id="${index}">Remove</button>
         `;
    
     tripList.appendChild(card);
 
     });
+
+    let deleteButtons = document.querySelectorAll(".delete-btn");
+
+    deleteButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+            deleteTrip(button.dataset.id);
+        });
+    });
 }
+
+function deleteTrip(index) {
+
+    trips.splice(index, 1);
+
+    saveTrips();
+    showTrips();
+}
+
     function saveTrips() {
 
         localStorage.setItem("trips",JSON.stringify(trips));
     }
-  
-
 
 function getDaysLeft(date) {
 
@@ -78,3 +98,22 @@ function getDaysLeft(date) {
 
     return Math.ceil(diff / (1000 * 60 * 60 * 24) );
 }
+
+addItemBtn.addEventListener("click", function() {
+
+    if(itemInput.value === "") {
+        return;
+    }
+
+    let item = document.createElement("div");
+    item.className = "check-item";
+
+    item.innerHTML = 
+    `
+        <input type="checkbox">
+        <label>${itemInput.value}</label>
+    `;
+
+    document.querySelector(".checklist-card").appendChild(item);
+    itemInput.value = "";
+});
