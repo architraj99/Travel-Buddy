@@ -134,6 +134,13 @@ h2 {
     color: #1b4332;
 }
 
+#tripCount {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
 .footer{
     background: #2d6a4f;
     text-align: center;

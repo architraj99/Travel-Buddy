@@ -4,6 +4,11 @@ const budgetInput = document.getElementById("budgetInput");
 
 const addBtn = document.getElementById("addBtn");
 const tripList = document.getElementById("tripList");
+const tripCount = document.getElementById("tripCount");
+
+let trips = JSON.parse(localStorage.getItem("trips")) || [];
+
+showTrips();
 
 addBtn.addEventListener("click", addTrip);
 
@@ -18,26 +23,51 @@ function addTrip() {
         return;
     }
 
-    let daysLeft = getDaysLeft(date);
+    trips.push( {
+        place: place,
+        date: date,
+        budget: budget
+    });
 
-    let card = document.createElement("div");
-    card.className = "trip-card";
-
-    card.innerHTML = 
-    `
-        <h3>${place}</h3>
-        <p>Date: ${date}</p>
-        <p>Budget: ₹${budget}</p>
-
-        <p class="days-left">${daysLeft} Days Left</p>
-    `;
-   
-    tripList.appendChild(card);
+    saveTrips();
+    showTrips();
 
     placeInput.value = "";
     dateInput.value = "";
     budgetInput.value = "";
 }
+
+function showTrips() {
+
+    tripList.innerHTML = "";
+    tripCount.textContent = trips.length + "Trips Added";
+
+    trips.forEach(function(trip) {
+
+        let daysLeft = getDaysLeft(trip.date);
+
+        let card = document.createElement("div");
+        card.className = "trip-card";
+
+        card.innerHTML = 
+        `
+            <h3>${trip.place}</h3>
+            <p>Date: ${trip.date}</p>
+            <p>Budget: ₹${trip.budget}</p>
+
+            <p class="days-left">${daysLeft} Days Left</p>
+        `;
+   
+    tripList.appendChild(card);
+
+    });
+}
+    function saveTrips() {
+
+        localStorage.setItem("trips",JSON.stringify(trips));
+    }
+  
+
 
 function getDaysLeft(date) {
 
