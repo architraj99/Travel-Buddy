@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Buddy</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        html{scroll-behavior:smooth;}
+    </style>
 </head>
 <body>
 
@@ -12,13 +16,14 @@
         <div class="logo">Travel Buddy</div>
 
         <ul class="nav-links">
-            <li><a href="#home">Home</a> </li>
-            <li><a href="#planner">Planner</a> </li>
-            <li><a href="#trips">Trips</a> </li>
-            <li><a href="#checklist">Checklist</a> </li>
+
+            <li><a href="#" onclick="goToSection('home')">Home</a> </li>
+            <li><a href="#" onclick="goToSection('planner')">Planner</a> </li>
+            <li><a href="#" onclick="goToSection('trips')">Trips</a> </li>
+            <li><a href="#" onclick="goToSection('checklist')">Checklist</a> </li>
         </ul>
     </nav>
-
+ 
     <section class="hero" id="home">
 
         <div class="hero-content">
@@ -27,7 +32,7 @@
 
             <p>Hey Buddy, Let's manage all your exciting travel plans here in one place </p>
 
-            <a href="#planner" class="hero-btn">Start Planning</a>
+            <button class="hero-btn" onclick="goToPlanner()">Start Planning</button>
         </div>
 
     </section>
@@ -41,7 +46,7 @@
             <div class="input-group">
 
                 <label>Destination</label>
-                <input type="text" id="placeInput" placeholder="Where do you want to go?">
+                <input type="text" id="placeInput" placeholder="Where do you plan to go?">
             </div>
 
             <div class="input-group">
@@ -121,6 +126,18 @@
     <footer>
         <p>Travel Buddy</p>
     </footer>
+
+    <script>
+        function goToPlanner() {
+
+            document.getElementById("planner").scrollIntoView({behavior: "smooth"});
+        }
+
+        function goToSection(sectionId) {
+
+            document.getElementById(sectionId).scrollIntoView({behavior: "smooth"});
+        }
+    </script>
 
     <script src="script.js"></script>
 
