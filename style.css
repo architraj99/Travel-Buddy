@@ -81,7 +81,7 @@ h2 {
 
 .planner-card,
 .trip-card,
-.checklist-card {
+.checklist-card { 
     background: white;
     max-width: 600px;
     margin: auto;
@@ -98,7 +98,9 @@ h2 {
 }
 
 .input-group input,
-.add-btn {
+.add-btn,
+#searchInput,
+#itemInput {
     width: 100%;
     padding: 10px;
 }
@@ -136,17 +138,17 @@ h2 {
     color: #1b4332;
 }
 
-#tripCount {
+#tripCount,
+#totalBudget {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: bold;
     color: #2d6a4f;
 }
 
+#searchInput,
 #itemInput,
 #addItemBtn{
-    width: 100%;
-    padding: 10px;
     margin-bottom: 10px;
 }
 

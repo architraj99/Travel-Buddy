@@ -5,6 +5,8 @@ const budgetInput = document.getElementById("budgetInput");
 const addBtn = document.getElementById("addBtn");
 const tripList = document.getElementById("tripList");
 const tripCount = document.getElementById("tripCount");
+const totalBudget = document.getElementById("totalBudget");
+const searchInput = document.getElementById("searchInput");
 
 const itemInput = document.getElementById("itemInput");
 const addItemBtn = document.getElementById("addItemBtn");
@@ -39,13 +41,21 @@ function addTrip() {
     budgetInput.value = "";
 }
 
-function showTrips() {
+function showTrips(searchText = "") {
 
     tripList.innerHTML = "";
     tripCount.textContent = trips.length + "Trips Added";
 
-    trips.forEach(function(trip, index) {
+    let budgetTotal = 0;
 
+    trips.forEach(function(trip, index) {
+        
+        budgetTotal += Number(trip.budget);
+
+        if(searchText && !trip.place.toLowerCase().includes(searchText.toLowerCase()) ) {
+            return;
+        }
+ 
         let daysLeft = getDaysLeft(trip.date);
 
         let card = document.createElement("div");
@@ -66,6 +76,8 @@ function showTrips() {
 
     });
 
+    totalBudget.textContent = "Total Budget: ₹" + budgetTotal;
+
     let deleteButtons = document.querySelectorAll(".delete-btn");
 
     deleteButtons.forEach(function(button) {
@@ -81,7 +93,7 @@ function deleteTrip(index) {
     trips.splice(index, 1);
 
     saveTrips();
-    showTrips();
+    showTrips(searchInput.value);
 }
 
     function saveTrips() {
@@ -98,6 +110,11 @@ function getDaysLeft(date) {
 
     return Math.ceil(diff / (1000 * 60 * 60 * 24) );
 }
+
+searchInput.addEventListener("input", function() {
+    
+    showTrips(searchInput.value);
+});
 
 addItemBtn.addEventListener("click", function() {
 
@@ -116,4 +133,4 @@ addItemBtn.addEventListener("click", function() {
 
     document.querySelector(".checklist-card").appendChild(item);
     itemInput.value = "";
-});
+}); 
