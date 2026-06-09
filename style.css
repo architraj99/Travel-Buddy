@@ -1,20 +1,20 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    font-family: Arial, sans-serif;
-    background: #f4f7f4;
+    font-family:Arial,sans-serif;
+    background:white;
 }
 
 nav{
-    background: #2d6a4f;
-    padding: 15px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background:#00301a;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo,
@@ -22,158 +22,213 @@ nav{
 .hero-btn,
 .add-btn,
 footer{
-    color: white;
+    color:white;
 }
 
 .logo{
-    font-size: 24px;
-    font-weight: bold;
+    font-size:24px;
+    font-weight:bold;
 }
 
 .nav-links{
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style:none;
+    display:flex;
+    gap:20px;
 }
 
-.nav-links a,
-.hero-btn{
-    text-decoration: none;
+.nav-links a{
+    text-decoration:none;
 }
 
 .hero {
 
-    height: 80vh;
-    background: #d8f3dc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    height:80vh;
+    background:url("https://raw.githubusercontent.com/architraj99/Travel-Buddy/d2af20667e161ce7b12518fbf5137ad4dff792d9/travelbg.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(31,2,2,0.4);
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
 }
 
 .hero-content h1{
-    color: #1b4332;
-    margin-bottom: 15px;
+    color:rgb(238, 158, 67);
+    margin-bottom:15px;
+    font-size:56px;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 }
 
 .hero-content p{
-    margin-bottom: 20px;
+    color:rgb(250, 206, 85);
+    margin-bottom:20px;
+    font-weight:bold;
+    font-size:22px;
+    text-shadow:2px 2px 5px rgba(0,0,0,0.8);
 }
 
 .hero-btn,
 .add-btn,
 #addItemBtn{
-    background: #2d6a30;
-    padding: 10px 20px;
-    border: none;
-    color: white;
+    background:#2d6a4f;
+    padding:10px 20px;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+.planner-section{
+    background:#449c44;
+}
+
+.trips-section{
+    background:#2c6997;
+}
+
+.checklist-section{
+    background:#e0c436;
 }
 
 section{
-    padding: 50px 8%;
+    padding:50px 8%;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align:center;
+    margin-bottom:20px;
 }
 
-.planner-card,
-.trip-card,
-.checklist-card { 
-    background: white;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
+.planner-card{
+    background:#998f8f;
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+    border-radius:8px;
+}
+
+.trip-card{
+    background:white;
+    max-width:320px;
+    border:1px solid #d65b5b;
+    padding:20px;
+    border-radius:8px;
+}
+
+.checklist-card{
+    background:white;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+    border-radius:8px;
 }
 
 .input-group{
-    margin-bottom: 15px;
+    margin-bottom:15px;
 }
 
 .input-group label{
-    display: block;
-    margin-bottom: 5px;
+    display:block;
+    margin-bottom:5px;
 }
 
 .input-group input,
 .add-btn,
 #searchInput,
 #itemInput {
-    width: 100%;
-    padding: 10px;
-}
-
-.check-item{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.trip-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.trip-card{
-    max-width: 320px;
-    border: 1px solid #ddd;
-}
-
-.trip-card h3{
-    color: #2d6a4f;
-    margin-bottom: 8px;
-}
-
-.trip-card p{
-    margin: 5px 0;
-}
-
-.days-left{
-    margin-top: 8px;
-    font-weight: bold;
-    color: #1b4332;
-}
-
-#tripCount,
-#totalBudget {
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #2d6a4f;
+    width:100%;
+    padding:12px;
 }
 
 #searchInput,
 #itemInput,
 #addItemBtn{
-    margin-bottom: 10px;
+    margin-bottom:10px;
+}
+
+.check-item{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.trip-list {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.trip-card h3{
+    color:#2d6a4f;
+    margin-bottom:8px;
+}
+
+.trip-card p{
+    margin:5px 0;
+}
+
+.days-left{
+    margin-top:8px;
+    font-weight:bold;
+    color:#1b4332;
+}
+
+#tripCount,
+#totalBudget {
+    text-align:center;
+    margin-bottom:15px;
+    font-weight:bold;
+    color:#000;
 }
 
 .delete-btn{
-    margin-top: 10px;
-    padding: 8px 12px;
-    border: none;
-    background: #c1121f;
-    color: white;
+    margin-top:10px;
+    padding:8px 12px;
+    border:none;
+    background:#c1121f;
+    color:white;
+    cursor:pointer;
 }
 
-.footer{
-    background: #2d6a4f;
-    text-align: center;
-    padding: 15px;
+footer{
+    background:#000;
+    text-align:center;
+    padding:15px;
 }
 
-@media(max-width: 768px) {
+@media(max-width:768px) {
 
     nav{
-        flex-direction: column;
-        gap: 10px;
+        flex-direction:column;
+        gap:10px;
     }
 
     .hero-content h1{
-        font-size: 32px;
+        font-size:32px;
     }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    
 }
