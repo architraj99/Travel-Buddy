@@ -32,3 +32,4 @@ I wanted to create a practical website that helps travelers organize ideas and p
 
 
 ## screenshot
+<img width="914" height="382" alt="image" src="https://github.com/user-attachments/assets/88bc1769-0b87-45ac-aba6-eed5316284fa" />
